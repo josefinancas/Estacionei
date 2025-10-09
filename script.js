@@ -16,3 +16,27 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Login
+    const loginForm = document.getElementById("loginForm");
+    if (loginForm) {
+        loginForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const user = document.getElementById("username").value.trim();
+            alert(`Bem-vindo de volta, ${user}!`);
+        });
+    }
+
+    // Cadastro
+    const registerForm = document.getElementById("registerForm");
+    if (registerForm) {
+        registerForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const newUser = document.getElementById("newUsername").value.trim();
+            alert(`Conta criada com sucesso! Bem-vindo, ${newUser}.`);
+            window.location.href = "index.html"; // redireciona para login
+        });
+    }
+});
