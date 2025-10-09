@@ -40,3 +40,14 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+
+// Página de perfil
+const perfilForm = document.getElementById("perfilForm");
+if (perfilForm) {
+    perfilForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        alert("Perfil atualizado com sucesso!");
+    });
+}
+

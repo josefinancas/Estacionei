@@ -135,3 +135,34 @@ body {
         padding: 1.5rem;
     }
 }
+
+/* === Página de Perfil === */
+.perfil-header {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 0.8rem 1rem;
+    border-radius: 8px 8px 0 0;
+}
+
+.perfil-titulo {
+    margin: 0;
+    font-weight: 600;
+}
+
+.perfil-subtitulo {
+    font-size: 0.9rem;
+    color: #22c55e;
+    display: block;
+    margin-top: 0.2rem;
+}
+
+.btn-foto {
+    background-color: #22c55e;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+}
+
+.btn-foto:hover {
+    background-color: #1fa74f;
+}
