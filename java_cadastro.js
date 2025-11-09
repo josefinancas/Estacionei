@@ -7,7 +7,6 @@
   const okPass = document.getElementById('ok-pass');
   const toggle = document.querySelector('.toggle');
 
-  // Validação simples (client-side)
   function userValido(v){
     return /^[a-zA-Z0-9._-]{3,}$/.test(v.trim());
   }
@@ -25,22 +24,16 @@
     okPass.style.display = ok ? 'block' : 'none';
   });
 
-  // Mostrar/ocultar senha
   toggle.addEventListener('click', () => {
     const isPwd = password.type === 'password';
     password.type = isPwd ? 'text' : 'password';
     toggle.textContent = isPwd ? '🙈' : '👁️';
   });
 
-  // Submit com prevenção e “simulação” de sucesso
   form.addEventListener('submit', (ev) => {
     ev.preventDefault();
-
     const uOK = userValido(username.value);
     const pOK = passValida(password.value);
-    eUser.style.display = uOK ? 'none' : 'block';
-    ePass.style.display = pOK ? 'none' : 'block';
-    okPass.style.display = pOK ? 'block' : 'none';
 
     if (uOK && pOK) {
       alert('Cadastro realizado com sucesso! 🎉');
@@ -51,3 +44,4 @@
     }
   });
 })();
+

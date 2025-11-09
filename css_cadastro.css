@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
-
 :root{
   --bg:#f5f7fb;
   --card:#ffffff;
@@ -13,49 +11,50 @@
   --radius:16px;
 }
 
-*{ box-sizing:border-box }
-html, body{ height:100% }
+*{box-sizing:border-box}
+html,body{height:100%}
+
 body{
   margin:0;
-  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial;
+  font-family: "Inter", sans-serif;
   background: var(--bg);
-  color: var(--text);
+  color:var(--text);
   display:grid;
   place-items:center;
   padding:24px;
 }
 
-/* Botão Voltar (topo direito) */
-.btn-back{
-  position: fixed;
-  top: 12px;
-  right: 12px;
-  background: #7ed957;
-  color: #113b06;
-  font-weight: 700;
-  padding: 8px 14px;
-  border-radius: 10px;
-  text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+/* BOTÃO VOLTAR */
+.btn-voltar{
+  position:fixed;
+  top:16px;
+  right:16px;
+  background:#8ad64a;
+  color:#fff;
+  padding:8px 16px;
+  border-radius:8px;
+  text-decoration:none;
+  font-weight:600;
+  font-size:.9rem;
 }
-.btn-back:hover{ filter: brightness(0.95); }
+.btn-voltar:hover{background:#74c137}
 
 .card{
-  width: min(520px, 92vw);
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: 0 10px 30px rgba(2,18,64,.10);
-  padding: 28px 26px 32px;
+  width:min(420px, 92vw);
+  background:var(--card);
+  border-radius:var(--radius);
+  box-shadow:0 10px 30px rgba(2,18,64,.10);
+  padding:28px 26px;
 }
 
 h1{
-  margin: 6px 0 18px;
-  font-weight: 800;
-  text-align: center;
-  letter-spacing: .2px;
+  margin:6px 0 18px;
+  font-weight:800;
+  text-align:center;
 }
 
-.field{ margin:12px 0 16px; }
+.field{margin:12px 0 16px}
+
 label{
   display:block;
   font-size:.92rem;
@@ -69,8 +68,8 @@ input[type="text"], input[type="password"]{
   border-radius:10px;
   padding:0 14px;
   font-size:1rem;
-  transition: box-shadow .2s, border-color .2s, background .2s;
   background:#fff;
+  transition: box-shadow .2s, border-color .2s;
 }
 input:focus{
   outline:0;
@@ -78,63 +77,42 @@ input:focus{
   box-shadow:0 0 0 4px var(--ring);
 }
 
-.password-wrap{ position:relative; }
+.password-wrap{position:relative;}
+
 .toggle{
   position:absolute; right:10px; top:50%;
   transform:translateY(-50%);
   border:0; background:transparent; cursor:pointer;
-  color:var(--muted); font-size:.9rem;
-  padding:4px 6px; border-radius:6px;
+  color:var(--muted); font-size:1rem;
 }
-.toggle:hover{ color:var(--text); background:#f3f4f6 }
 
 .btn{
-  appearance:none;
   width:100%;
-  border:0;
   height:48px;
   border-radius:10px;
   background:var(--brand);
-  color:#fff; font-weight:700; font-size:1rem;
+  color:#fff; font-weight:700;
   cursor:pointer;
-  transition: transform .02s, background .2s, box-shadow .2s;
-  box-shadow: 0 6px 16px rgba(32,61,145,.25);
+  margin-top:10px;
 }
-.btn:hover{ background:var(--brand-600) }
-.btn:active{ transform:translateY(1px) }
+.btn:hover{background:var(--brand-600)}
 
 .row-muted{
-  text-align:center; color:var(--muted); font-size:.95rem;
+  text-align:center; color:var(--muted);
   margin-top:12px;
 }
-.row-muted a{ color:#10b981; text-decoration:none; font-weight:600; }
-.row-muted a:hover{ text-decoration:underline }
-
-/* Logo */
-.brand-link{ display:block; width:100%; }
-#brand-logo{
-  width: 160px;   /* ajuste se quiser */
-  height: auto;
-  display:block;
-  margin: 24px auto 4px auto;
+.row-muted a{
+  color:#10b981; text-decoration:none; font-weight:600;
 }
 
-/* Mensagens */
-.error{
-  color:var(--error);
-  font-size:.86rem;
-  margin-top:6px;
-  display:none;
-}
-.ok{
-  color:var(--ok);
-  font-size:.86rem;
-  display:none;
-  margin-top:6px;
+.brand{
+  text-align:center;
+  font-weight:800;
+  font-size:1rem;
+  margin-top:20px;
 }
 
-/* Acessibilidade */
-.sr-only{
-  position:absolute!important; width:1px;height:1px;padding:0;margin:-1px;
-  overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
-}
+/* mensagens */
+.error,.ok{font-size:.9rem; display:none; margin-top:6px;}
+.error{color:var(--error);}
+.ok{color:var(--ok);}
