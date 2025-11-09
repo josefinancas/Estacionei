@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crie sua conta — Estacionou</title>
+
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <main class="card" role="main">
+    <h1>Crie sua conta</h1>
+
+    <form id="form-signup" novalidate>
+      <div class="field">
+        <label for="username">Nome de usuário</label>
+        <input id="username" name="username" type="text"
+               placeholder="Digite seu nome de usuário"
+               autocomplete="username" required minlength="3" />
+        <div class="error" id="e-user">
+          Informe pelo menos 3 caracteres (apenas letras, números, “.”, “_” e “-”).
+        </div>
+      </div>
+
+      <div class="field password-wrap">
+        <label for="password">Senha</label>
+        <input id="password" name="password" type="password"
+               placeholder="Digite sua senha"
+               autocomplete="new-password" required minlength="6" />
+        <button type="button" class="toggle"
+                aria-controls="password" aria-label="Mostrar/ocultar senha">👁️</button>
+        <div class="error" id="e-pass">A senha precisa de ao menos 6 caracteres.</div>
+        <div class="ok" id="ok-pass">Senha válida ✓</div>
+      </div>
+
+      <!-- Dica: o ideal é o botão ser apenas submit (sem <a> dentro). Mantive igual ao seu. -->
+      <button class="btn" type="submit"><a href="cadastro.html">Cadastre-se</a></button>
+
+      <p class="row-muted">Já tem uma conta? <a href="login.html">Faça login</a></p>
+      <a href="index.html"><img src="assets/img/logo-transparente.png" alt="logo"></a>
+    </form>
+  </main>
+
+  <!-- JS externo -->
+  <script src="signup.js"></script>
+</body>
+</html>
