@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
 
 :root{
   --bg:#f5f7fb;
   --card:#ffffff;
   --text:#1f2937;
   --muted:#6b7280;
-  --brand:#203d91;        /* azul do botão */
+  --brand:#203d91;
   --brand-600:#1a2f72;
   --ring:#c7d2fe;
   --error:#dc2626;
@@ -13,37 +13,49 @@
   --radius:16px;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%}
-
+*{ box-sizing:border-box }
+html, body{ height:100% }
 body{
   margin:0;
-  font-family:"Inter",sans-serif;
-  background:var(--bg);
-  color:var(--text);
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
   display:grid;
   place-items:center;
   padding:24px;
 }
 
+/* Botão Voltar (topo direito) */
+.btn-back{
+  position: fixed;
+  top: 12px;
+  right: 12px;
+  background: #7ed957;
+  color: #113b06;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 10px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+.btn-back:hover{ filter: brightness(0.95); }
+
 .card{
-  width:min(420px, 92vw);
-  background:var(--card);
-  border-radius:var(--radius);
-  box-shadow:0 10px 30px rgba(2,18,64,.10);
-  padding:28px 26px;
+  width: min(520px, 92vw);
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(2,18,64,.10);
+  padding: 28px 26px 32px;
 }
 
 h1{
-  margin:6px 0 50px;
-  font-weight:400;
-  font-size:23px;
-  text-align:center;
-  letter-spacing:.2px;
+  margin: 6px 0 18px;
+  font-weight: 800;
+  text-align: center;
+  letter-spacing: .2px;
 }
 
-.field{margin:12px 0 16px}
-
+.field{ margin:12px 0 16px; }
 label{
   display:block;
   font-size:.92rem;
@@ -60,7 +72,6 @@ input[type="text"], input[type="password"]{
   transition: box-shadow .2s, border-color .2s, background .2s;
   background:#fff;
 }
-
 input:focus{
   outline:0;
   border-color:var(--brand);
@@ -68,7 +79,6 @@ input:focus{
 }
 
 .password-wrap{ position:relative; }
-
 .toggle{
   position:absolute; right:10px; top:50%;
   transform:translateY(-50%);
@@ -76,7 +86,7 @@ input:focus{
   color:var(--muted); font-size:.9rem;
   padding:4px 6px; border-radius:6px;
 }
-.toggle:hover{color:var(--text); background:#f3f4f6}
+.toggle:hover{ color:var(--text); background:#f3f4f6 }
 
 .btn{
   appearance:none;
@@ -88,25 +98,28 @@ input:focus{
   color:#fff; font-weight:700; font-size:1rem;
   cursor:pointer;
   transition: transform .02s, background .2s, box-shadow .2s;
-  box-shadow:0 6px 16px rgba(32,61,145,.25);
+  box-shadow: 0 6px 16px rgba(32,61,145,.25);
 }
-.btn:hover{background:var(--brand-600)}
-.btn:active{transform:translateY(1px)}
+.btn:hover{ background:var(--brand-600) }
+.btn:active{ transform:translateY(1px) }
 
 .row-muted{
   text-align:center; color:var(--muted); font-size:.95rem;
   margin-top:12px;
 }
-.row-muted a{
-  color:#10b981; text-decoration:none; font-weight:600;
-}
-.row-muted a:hover{text-decoration:underline}
+.row-muted a{ color:#10b981; text-decoration:none; font-weight:600; }
+.row-muted a:hover{ text-decoration:underline }
 
-.brand{
-  margin-top:14px; text-align:center; font-weight:800; letter-spacing:.4px;
-  color:var(--brand);
+/* Logo */
+.brand-link{ display:block; width:100%; }
+#brand-logo{
+  width: 160px;   /* ajuste se quiser */
+  height: auto;
+  display:block;
+  margin: 24px auto 4px auto;
 }
 
+/* Mensagens */
 .error{
   color:var(--error);
   font-size:.86rem;
@@ -124,14 +137,4 @@ input:focus{
 .sr-only{
   position:absolute!important; width:1px;height:1px;padding:0;margin:-1px;
   overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;
-}
-
-button a { text-decoration:none; color:#fff; }
-
-img{
-  width:147px;
-  height:32px;
-  display:block;
-  margin:auto;
-  margin-top:50px;
 }

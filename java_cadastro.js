@@ -8,8 +8,12 @@
   const toggle = document.querySelector('.toggle');
 
   // Validação simples (client-side)
-  function userValido(v){ return /^[a-zA-Z0-9._-]{3,}$/.test(v.trim()); }
-  function passValida(v){ return v.trim().length >= 6; }
+  function userValido(v){
+    return /^[a-zA-Z0-9._-]{3,}$/.test(v.trim());
+  }
+  function passValida(v){
+    return v.trim().length >= 6;
+  }
 
   username.addEventListener('input', () => {
     eUser.style.display = userValido(username.value) ? 'none' : 'block';
